@@ -1,0 +1,61 @@
+[System]
+Name='SII'
+Type='mamdani'
+Version=2.0
+NumInputs=4
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Radiação_Solar'
+Range=[10 50]
+NumMFs=5
+MF1='mf1':'gaussmf',[4.247 10]
+MF2='mf2':'gaussmf',[4.247 20]
+MF3='mf3':'gaussmf',[4.247 30]
+MF4='mf4':'gaussmf',[4.247 40]
+MF5='mf5':'gaussmf',[4.247 50]
+
+[Input2]
+Name='Temperatura_Ambiente'
+Range=[-5 45]
+NumMFs=3
+MF1='mf1':'trimf',[-25 -5 15]
+MF2='mf2':'trimf',[-3.553e-15 20 40]
+MF3='mf3':'trimf',[25 45 65]
+
+[Input3]
+Name='Umidade_do_Solo'
+Range=[0 100]
+NumMFs=2
+MF1='mf1':'trimf',[-100 -8.882e-16 100]
+MF2='mf2':'trimf',[0 100 200]
+
+[Input4]
+Name='TarifaKw'
+Range=[0 3]
+NumMFs=3
+MF1='mf1':'trimf',[-1.2 0 1.2]
+MF2='mf2':'trimf',[0.3 1.5 2.7]
+MF3='mf3':'trimf',[1.8 3 4.2]
+
+[Output1]
+Name='horas'
+Range=[0 24]
+NumMFs=9
+MF1='mf1':'gaussmf',[1.274 5.551e-17]
+MF2='mf2':'gaussmf',[1.274 3]
+MF3='mf3':'gaussmf',[1.274 6]
+MF4='mf4':'gaussmf',[1.274 9]
+MF5='mf5':'gaussmf',[1.274 12]
+MF6='mf6':'gaussmf',[1.274 15]
+MF7='mf7':'gaussmf',[1.274 18]
+MF8='mf8':'gaussmf',[1.274 21]
+MF9='mf9':'gaussmf',[1.274 24]
+
+[Rules]

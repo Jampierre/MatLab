@@ -1,0 +1,46 @@
+[System]
+Name='Veículo Autônomo'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='PHor'
+Range=[0 100]
+NumMFs=5
+MF1='Aproximadamente_0':'gaussmf',[10.62 0]
+MF2='Aproximadamente_25':'gaussmf',[10.62 25]
+MF3='Aproximadamente_50':'gaussmf',[10.62 50]
+MF4='Aproximadamente_75':'gaussmf',[10.62 75]
+MF5='Aproximadamente_100':'gaussmf',[10.62 100]
+
+[Input2]
+Name='AVert'
+Range=[0 360]
+NumMFs=5
+MF1='Aproximadamente_0':'gaussmf',[38.23 0]
+MF2='Aproximadamente_90':'gaussmf',[38.23 90]
+MF3='Aproximadamente_180':'gaussmf',[38.23 180]
+MF4='Aproximadamente_270':'gaussmf',[38.23 270]
+MF5='Aproximadamente_360':'gaussmf',[38.23 360]
+
+[Output1]
+Name='AVol'
+Range=[-30 30]
+NumMFs=7
+MF1='Muito_Esquerda':'gaussmf',[4.247 -30]
+MF2='Esquerda':'gaussmf',[4.247 -20]
+MF3='Pouco_Esquerda':'gaussmf',[4.247 -10]
+MF4='Reto':'gaussmf',[4.247 0]
+MF5='Pouco_Direita':'gaussmf',[4.247 10]
+MF6='Direita':'gaussmf',[4.247 20]
+MF7='Muito_Direita':'gaussmf',[4.247 30]
+
+[Rules]

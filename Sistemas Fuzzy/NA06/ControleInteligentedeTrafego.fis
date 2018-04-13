@@ -1,0 +1,56 @@
+[System]
+Name='Controle Inteligente de Tráfego'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=16
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='TaxaVerde'
+Range=[0 30]
+NumMFs=4
+MF1='Muito_Baixa':'trimf',[-10 -1.11e-16 10]
+MF2='Baixa':'trimf',[0 10 20]
+MF3='Alta':'trimf',[10 20 30]
+MF4='Muito_Alta':'trimf',[20 30 40]
+
+[Input2]
+Name='CompVermelho'
+Range=[0 75]
+NumMFs=4
+MF1='Muito_Pequeno':'trimf',[-25 -2.22e-16 25]
+MF2='Pequeno':'trimf',[0 25 50]
+MF3='Médio':'trimf',[25 50 75]
+MF4='Grande':'trimf',[50 75 100]
+
+[Output1]
+Name='TempoVerde'
+Range=[5 50]
+NumMFs=3
+MF1='Curto':'trimf',[-13 5 23]
+MF2='Médio':'trimf',[9.5 27.5 45.5]
+MF3='Longo':'trimf',[32 50 68]
+
+[Rules]
+1 1, 1 (1) : 1
+2 1, 1 (1) : 1
+3 1, 2 (1) : 1
+4 1, 2 (1) : 1
+1 2, 2 (1) : 1
+2 2, 2 (1) : 1
+3 2, 2 (1) : 1
+4 2, 3 (1) : 1
+1 3, 2 (1) : 1
+2 3, 2 (1) : 1
+3 3, 3 (1) : 1
+4 3, 3 (1) : 1
+1 4, 3 (1) : 1
+2 4, 3 (1) : 1
+3 4, 3 (1) : 1
+4 4, 3 (1) : 1

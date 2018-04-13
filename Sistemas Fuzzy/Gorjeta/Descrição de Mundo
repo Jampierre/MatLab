@@ -1,0 +1,12 @@
+Gorjeta _ S.Fisico : L
+
+x1: serviço -> X1: [0,10]
+x2: serviço -> X2: [0,10]
+
+y: gorjeta -> Y: [0,20] %
+
+R1: Se x1 é A1 {ruim} E x2 é B1{terrível} ENTÃO y é C1{baixa}
+R2: Se x1 é A3 {bom} E x2 é B3{boa} ENTÃO y é C3{generosa}
+R3: Se x1 é A2 {média} E x2 é B2{boa} ENTÃO y é C2{razoável}
+
+

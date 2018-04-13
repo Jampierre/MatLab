@@ -1,0 +1,23 @@
+A base de dados foi tirado do INMET, da estação meteorologica automatica de Viçosa - MG.
+
+http://www.inmet.gov.br/portal/index.php?r=estacoes/estacoesAutomaticas
+
+Os dados fornecidos pelo INMET so informação as coletas feita nos ultimos 365 dias( dados coletados de hora em hora)
+
+1)Trabalhar com a base de dados.
+Inicial 20 colunas,8753 linhas
+
+dados necessarios: Umidade relativa, pressão atmosférica
+OBS: É preciso ter um aumento na umidade relativoa dia-a-dia e dimuição da pressão atmosférica.
+Foi obeservado que a temperatura comecava a diminuir antes de chover*
+
+2)Foram excluidos os colunas com os valores max e min, ponto de orvalo, vento e radiação 
+Os dados estavam ordenados por data porem os horarios estavão desordenados, então, os valores foram reordenados.
+Final 6 colunas, 8753 linhas
+as duas primeras colunas são referente a data e hora respectivamente. Não serão utlizados diretamente, soviram apenas para paramentro de ordenação de forma correta dos dados.
+Sera utilizada para treinar a ANFIS os dados de temperatura, umidade e pressão, e a coluna de precipitação é a saida desejada.
+
+3)Foi somado a pressipitação de h/h para opter a pressipitação em mm de chuva diario, com isso os dados passaram a ter 365 linhas
+
+normalizar os dados* e randomizar*
+

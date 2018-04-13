@@ -1,0 +1,38 @@
+[System]
+Name='PrecoKw'
+Type='mamdani'
+Version=2.0
+NumInputs=2
+NumOutputs=1
+NumRules=0
+AndMethod='min'
+OrMethod='max'
+ImpMethod='min'
+AggMethod='max'
+DefuzzMethod='centroid'
+
+[Input1]
+Name='Horas'
+Range=[0 23]
+NumMFs=3
+MF1='mf1':'trimf',[-11.5 -3.331e-16 11.5]
+MF2='mf2':'trimf',[0 11.5 23]
+MF3='mf3':'trimf',[11.5 23 34.5]
+
+[Input2]
+Name='Bandeira'
+Range=[0 3]
+NumMFs=3
+MF1='mf1':'trimf',[-1.2 0 1.2]
+MF2='mf2':'trimf',[0.3 1.5 2.7]
+MF3='mf3':'trimf',[1.8 3 4.2]
+
+[Output1]
+Name='Preço'
+Range=[0 2]
+NumMFs=3
+MF1='mf1':'trimf',[-0.8 0 0.8]
+MF2='mf2':'trimf',[0.2 1 1.8]
+MF3='mf3':'trimf',[1.2 2 2.8]
+
+[Rules]
